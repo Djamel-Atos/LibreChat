@@ -32,6 +32,7 @@ services:
       - type: bind
         source: ./.env
         target: /app/.env
+      - ./librechat.yaml:/app/librechat.yaml:ro
       - ./images:/app/client/public/images
       - ./uploads:/app/uploads
       - ./logs:/app/logs
