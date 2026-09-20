@@ -17,14 +17,14 @@ export const defaultTheme: IThemeRGB = {
   'rgb-shimmer-dip': '129 130 134', // #818286
 
   // Link and accent colors
-  'rgb-link': '37 99 235', // #2563eb (blue-600)
-  'rgb-link-hover': '29 78 216', // #1d4ed8 (blue-700)
+  'rgb-link': '0 115 230', // #0073e6 (Atos blue)
+  'rgb-link-hover': '0 91 184', // #005bb8 (Atos blue hover)
   'rgb-link-visited': '147 51 234', // #9333ea (purple-600)
-  'rgb-accent-primary': '18 110 107', // #126e6b
-  'rgb-accent-primary-hover': '10 79 83', // #0a4f53
+  'rgb-accent-primary': '0 115 230', // #0073e6 (Atos blue)
+  'rgb-accent-primary-hover': '0 91 184', // #005bb8 (Atos blue hover)
 
   // Ring colors
-  'rgb-ring-primary': '89 89 89', // #595959 (gray-500)
+  'rgb-ring-primary': '128 191 255', // #80bfff (Atos blue focus)
 
   // Header colors
   'rgb-header-primary': '255 255 255', // #fff (white)
@@ -32,9 +32,9 @@ export const defaultTheme: IThemeRGB = {
   'rgb-header-button-hover': '247 247 248', // #f7f7f8 (gray-50)
 
   // Surface colors
-  'rgb-surface-active': '236 236 236', // #ececec (gray-100)
-  'rgb-surface-active-alt': '227 227 227', // #e3e3e3 (gray-200)
-  'rgb-surface-hover': '227 227 227', // #e3e3e3 (gray-200)
+  'rgb-surface-active': '234 244 255', // #eaf4ff (Atos blue subtle)
+  'rgb-surface-active-alt': '217 236 255', // #d9ecff (Atos blue active)
+  'rgb-surface-hover': '234 244 255', // #eaf4ff (Atos blue subtle)
   'rgb-surface-hover-alt': '205 205 205', // #cdcdcd (gray-300)
   'rgb-surface-composer-hover': '227 227 227', // #e3e3e3 (gray-200)
   'rgb-surface-primary': '255 255 255', // #fff (white)
@@ -96,7 +96,7 @@ export const defaultTheme: IThemeRGB = {
   'rgb-text-on-status': '255 255 255', // #fff (white)
 
   // Brand colors
-  'rgb-brand-purple': '126 34 206', // #7e22ce (purple-700)
+  'rgb-brand-purple': '0 115 230', // #0073e6 (Atos blue)
 
   /** Code syntax highlighting, measured against the `surface-code` fill. */
   'rgb-syntax-text': '33 33 33', // #212121 (gray-800)

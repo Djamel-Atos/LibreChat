@@ -17,14 +17,14 @@ export const darkTheme: IThemeRGB = {
   'rgb-shimmer-dip': '179 179 179', // #b3b3b3
 
   // Link and accent colors
-  'rgb-link': '96 165 250', // #60a5fa (blue-400)
-  'rgb-link-hover': '147 197 253', // #93c5fd (blue-300)
+  'rgb-link': '102 181 255', // #66b5ff (Atos blue light)
+  'rgb-link-hover': '153 204 255', // #99ccff (Atos blue hover)
   'rgb-link-visited': '192 132 252', // #c084fc (purple-400)
-  'rgb-accent-primary': '65 167 157', // #41a79d
-  'rgb-accent-primary-hover': '109 200 185', // #6dc8b9
+  'rgb-accent-primary': '0 115 230', // #0073e6 (Atos blue)
+  'rgb-accent-primary-hover': '51 153 255', // #3399ff (Atos blue hover)
 
   // Ring colors (not defined in dark mode, using default)
-  'rgb-ring-primary': '89 89 89', // #595959 (gray-500)
+  'rgb-ring-primary': '102 181 255', // #66b5ff (Atos blue focus)
 
   // Header colors
   'rgb-header-primary': '47 47 47', // #2f2f2f (gray-700)
@@ -32,9 +32,9 @@ export const darkTheme: IThemeRGB = {
   'rgb-header-button-hover': '47 47 47', // #2f2f2f (gray-700)
 
   // Surface colors
-  'rgb-surface-active': '89 89 89', // #595959 (gray-500)
-  'rgb-surface-active-alt': '47 47 47', // #2f2f2f (gray-700)
-  'rgb-surface-hover': '57 57 57', // #393939 (gray-650)
+  'rgb-surface-active': '18 48 74', // #12304a (Atos blue active)
+  'rgb-surface-active-alt': '27 68 101', // #1b4465 (Atos blue active alt)
+  'rgb-surface-hover': '24 58 88', // #183a58 (Atos blue hover)
   'rgb-surface-hover-alt': '66 66 66', // #424242 (gray-600)
   'rgb-surface-composer-hover': '66 66 66', // #424242 (gray-600)
   'rgb-surface-primary': '13 13 13', // #0d0d0d (gray-900)
@@ -106,7 +106,7 @@ export const darkTheme: IThemeRGB = {
   'rgb-text-on-status': '255 255 255', // #fff (white)
 
   // Brand colors
-  'rgb-brand-purple': '171 104 255', // #ab68ff
+  'rgb-brand-purple': '102 181 255', // #66b5ff (Atos blue light)
 
   /** Code syntax highlighting, measured against the `surface-code` fill. The
    *  comment and meta values are the flattened equivalents of the alpha-blended

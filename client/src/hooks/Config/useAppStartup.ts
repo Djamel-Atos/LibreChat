@@ -56,12 +56,9 @@ export default function useAppStartup({
     cleanupTimestampedStorage();
   }, []);
 
-  /** Set the app title */
+  /** Keep the browser title aligned with the custom application branding. */
   useEffect(() => {
-    const appTitle = startupConfig?.appTitle ?? '';
-    if (!appTitle) {
-      return;
-    }
+    const appTitle = 'SmartPlatform Navigator';
     document.title = appTitle;
     localStorage.setItem(LocalStorageKeys.APP_TITLE, appTitle);
   }, [startupConfig]);

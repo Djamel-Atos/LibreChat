@@ -44,8 +44,8 @@ export default function StartupLayout({ isAuthenticated }: { isAuthenticated?: b
   }, [isAuthenticated, navigate, data]);
 
   useEffect(() => {
-    document.title = startupConfig?.appTitle || 'LibreChat';
-  }, [startupConfig?.appTitle]);
+    document.title = 'SmartPlatform Navigator';
+  }, []);
 
   useEffect(() => {
     setError(null);

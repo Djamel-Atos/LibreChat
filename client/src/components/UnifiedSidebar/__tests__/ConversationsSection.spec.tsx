@@ -184,6 +184,17 @@ const renderSection = () =>
   );
 
 describe('ConversationsSection section order', () => {
+  it('renders the Atos logo above Projects', async () => {
+    const { getByAltText, getByTestId } = renderSection();
+    await settleRenders();
+
+    const logo = getByAltText('Atos');
+    expect(logo).toHaveAttribute('src', '/assets/atos-logo.svg');
+    expect(logo.compareDocumentPosition(getByTestId('projects-stub'))).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+  });
+
   it('renders Pinned between Projects and Chats', async () => {
     const { getByTestId } = renderSection();
     await settleRenders();

@@ -162,10 +162,25 @@ function ExpandedPanel({
             aria-label={localize(toggleLabel)}
             aria-expanded={expanded}
             aria-keyshortcuts={toggleSidebarAriaKey}
-            className="h-9 w-9 rounded-lg"
+            className="group relative h-9 w-9 rounded-lg"
             onClick={toggleClick}
           >
-            <Sidebar aria-hidden="true" className="h-5 w-5 text-text-primary" />
+            {expanded ? (
+              <Sidebar aria-hidden="true" className="h-5 w-5 text-text-primary" />
+            ) : (
+              <>
+                <img
+                  src="/assets/atos-emblem.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-8 w-8 scale-110 object-contain transition-opacity group-hover:opacity-0 group-focus-visible:opacity-0"
+                />
+                <Sidebar
+                  aria-hidden="true"
+                  className="absolute h-5 w-5 text-text-primary opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+                />
+              </>
+            )}
           </Button>
         }
       />

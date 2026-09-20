@@ -188,6 +188,12 @@ const ConversationsSection = memo(() => {
           <SearchBar isSmallScreen={isSmallScreen} />
         </div>
       )}
+      <div className="flex flex-shrink-0 flex-col justify-between px-3 py-1">
+        <div className="flex h-9 items-center gap-2">
+          <img src="/assets/atos-logo.svg" alt="Atos" className="h-4 w-auto -translate-y-1 object-contain" />
+          <img src="/assets/SPN-logo-bis.png" alt="SPN" className="h-14 w-auto" />
+        </div>
+      </div>
       <div
         ref={setScrollViewport}
         className="scrollbar-gutter-stable min-h-0 flex-1 overflow-y-auto overflow-x-hidden"
