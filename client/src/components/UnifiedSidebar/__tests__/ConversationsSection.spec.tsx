@@ -4,9 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { MessagesSquare } from 'lucide-react';
 import { atom, RecoilRoot, useRecoilValue, useSetRecoilState } from 'recoil';
 import type { SetterOrUpdater } from 'recoil';
 import type { SearchState } from '~/store/search';
+import type { NavLink } from '~/common';
 
 /**
  * Real recoil atom used to force ConversationsSection to re-render on demand,
@@ -91,6 +93,8 @@ jest.mock('~/Providers', () => ({
   __esModule: true,
   useAssistantsMapContext: () => ({}),
   useAgentsMapContext: () => ({}),
+  useActivePanel: () => ({ active: 'conversations' }),
+  resolveActivePanel: (active: string) => active,
 }));
 
 jest.mock('~/hooks/Input/useSelectMention', () => ({
@@ -136,6 +140,7 @@ jest.mock('~/components/Nav/Favorites/FavoriteItem', () => ({
 }));
 
 import ConversationsSection from '../ConversationsSection';
+import Nav from '~/components/SidePanel/Nav';
 import store from '~/store';
 
 let setStreamTick: SetterOrUpdater<number>;
@@ -184,15 +189,14 @@ const renderSection = () =>
   );
 
 describe('ConversationsSection section order', () => {
-  it('renders the Atos logo above Projects', async () => {
-    const { getByAltText, getByTestId } = renderSection();
-    await settleRenders();
+  it('renders Atos branding in the shared navigation shell', () => {
+    const links: NavLink[] = [
+      { title: 'com_ui_chat_history', icon: MessagesSquare, id: 'conversations' },
+    ];
+    const { getByAltText } = render(<Nav links={links} />);
 
-    const logo = getByAltText('Atos');
-    expect(logo).toHaveAttribute('src', '/assets/atos-logo.svg');
-    expect(logo.compareDocumentPosition(getByTestId('projects-stub'))).toBe(
-      Node.DOCUMENT_POSITION_FOLLOWING,
-    );
+    expect(getByAltText('Atos')).toHaveAttribute('src', '/assets/atos-logo.svg');
+    expect(document.querySelector('img[src="/assets/atos-emblem.png"]')).toBeInTheDocument();
   });
 
   it('renders Pinned between Projects and Chats', async () => {
